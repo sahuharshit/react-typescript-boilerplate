@@ -1,7 +1,7 @@
 // https://redux-toolkit.js.org/introduction/getting-started
 // Redux toolkit is a standard way of writing Redux Logic
 import { configureStore, ThunkAction, Action, Store } from '@reduxjs/toolkit';
-// import { ConfigStoreProps } from '@baaplms-fe/interfaces';
+
 // For adding any middleware to the store, append in the object middleware key with values in an array
 // If not provided, configureStore will call getDefaultMiddleware and use the array of middleware functions it returns.
 
@@ -21,13 +21,16 @@ export const configStore = (props: any): Store => {
      * Example: enhancers: [offline] will result in a final setup of [applyMiddleware, offline, devToolsExtension].
      */
   });
-
   return store;
 };
 
-export const configTypes = (store: Store) => {
-  type AppDispatch = typeof store.dispatch;
-  type RootState = ReturnType<typeof store.getState>;
-  type AppThunk<ReturnType = void> = ThunkAction<ReturnType, RootState, unknown, Action<string>>;
-};
-
+export type ApplicationDispatch = (store: Store) => typeof store.dispatch;
+export type ApplicationStateRoot = (
+  store: Store
+) => ReturnType<typeof store.getState>;
+export type ApplicationThunk<ReturnType = void> = ThunkAction<
+  ReturnType,
+  ApplicationStateRoot,
+  unknown,
+  Action<string>
+>;

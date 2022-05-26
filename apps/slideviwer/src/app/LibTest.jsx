@@ -1,8 +1,6 @@
-import { DefaultButton, Icons, PrimaryButton, theme } from "@qritive/qritive"
-import { Map } from 'lodash'
+import { DefaultButton, Icons, theme } from "@qritive/qritive"
 
 function LibTest () {
-
     return (
         <div>
             {theme.neutral.D15}
