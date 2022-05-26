@@ -1,10 +1,8 @@
-import { FetchUtils, SwitchInput, theme } from "@qritive/qritive"
-import { Map } from 'lodash'
+import {SwitchInput, theme } from "@qritive/qritive"
 
 function LibTest () {
-
     return (
-        <div>
+       <div>
             <SwitchInput checked inputSize="small"/>   
             {theme.neutral.D15}      
         </div>
