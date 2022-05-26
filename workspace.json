@@ -2,6 +2,7 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "qritive": "libs/qritive",
     "slideviwer": "apps/slideviwer",
     "slideviwer-e2e": "apps/slideviwer-e2e"
   }
