@@ -1,4 +1,4 @@
-import theme from './theme';
-import SwitchInput from './SwitchInput';
-
-export { theme, SwitchInput}
+export * from './theme';
+export * from './SwitchInput';
+export * from './Button';
+export * from './Icon';
