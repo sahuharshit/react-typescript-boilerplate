@@ -1,12 +1,12 @@
-import axios, { AxiosInstance } from "axios";
-import { get } from "lodash";
-import * as qs from "query-string";
+import axios, { AxiosInstance } from 'axios';
+import { get } from 'lodash';
+import * as qs from 'query-string';
 
-export let defaultHeaders = {
-  "Content-Type": "application/json",
-  Accept: "application/json",
-  "Access-Control-Allow-Origin": "*",
-  credentials: "include",
+export const defaultHeaders = {
+  'Content-Type': 'application/json',
+  Accept: 'application/json',
+  'Access-Control-Allow-Origin': '*',
+  credentials: 'include',
 };
 
 /**
@@ -42,11 +42,11 @@ axiosInstance.interceptors.response.use(
     switch (responseStatusCode) {
       case 404: {
         console.error({
-          type: "error",
+          type: 'error',
           message: get(
             error,
-            "response.data",
-            "URL doesnot exist on Specified Resource"
+            'response.data',
+            'URL doesnot exist on Specified Resource'
           ),
         });
         break;
@@ -54,24 +54,24 @@ axiosInstance.interceptors.response.use(
 
       case 401: {
         console.error({
-          type: "error",
-          message: get(error, "response.data", "User Unauthorized"),
+          type: 'error',
+          message: get(error, 'response.data', 'User Unauthorized'),
         });
         break;
       }
 
       case 500: {
         console.error({
-          type: "error",
-          message: get(error, "response.data", "Internal Server Error"),
+          type: 'error',
+          message: get(error, 'response.data', 'Internal Server Error'),
         });
         break;
       }
 
       default: {
         console.error({
-          type: "error",
-          message: get(error, "response.data", "Oops! Something went wrong !!"),
+          type: 'error',
+          message: get(error, 'response.data', 'Oops! Something went wrong !!'),
         });
         break;
       }
@@ -108,7 +108,7 @@ class FetchUtilsClass {
     return axiosInstance.delete(url);
   };
   generateQueryString = (qparams: any) => {
-    return "?" + qs.stringify(qparams);
+    return '?' + qs.stringify(qparams);
   };
 }
 const FetchUtils = new FetchUtilsClass();

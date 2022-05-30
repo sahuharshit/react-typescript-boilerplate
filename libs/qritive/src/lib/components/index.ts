@@ -1,4 +1,4 @@
-import 'antd/dist/antd.css'
+import 'antd/dist/antd.css';
 export * from './theme';
 export * from './input';
 export * from './radio';
