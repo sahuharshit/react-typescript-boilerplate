@@ -1,26 +1,22 @@
 import { message } from "antd";
 import { ArgsProps } from "antd/lib/message";
 
-interface IToastMessage {
-    config: ArgsProps;
-}
-
-export const ToastInfo = ({config}:IToastMessage) => {
+export const toastInfo = (config:ArgsProps) => {
     return message.info(config)
 }
 
-export const ToastSuccess = ({config}:IToastMessage) => {
+export const toastSuccess = (config:ArgsProps) => {
     return message.success(config)
 }
 
-export const ToastError = ({config}:IToastMessage) => {
+export const toastError = (config:ArgsProps) => {
     return message.error(config)
 }
 
-export const ToastWarning = ({config}:IToastMessage) => {
+export const toastWarning = (config:ArgsProps) => {
     return message.warning(config)
 }
 
-export const ToastLoading = ({config}:IToastMessage) => {
+export const toastLoading = (config:ArgsProps) => {
     return message.loading(config)
 }
