@@ -1,4 +1,4 @@
-import { DefaultButton, Icons, theme } from "@qritive/qritive"
+import { DefaultButton, Icons,  Input,  Radio,  theme } from "@qritive/qritive"
 
 function LibTest () {
     return (
@@ -6,6 +6,8 @@ function LibTest () {
             {theme.neutral.D15}
             <DefaultButton >hello world</DefaultButton>   
             <Icons.Pause />
+            <Input placeholder="hello" />
+            <Radio>hekbb</Radio>
         </div>
     )
 }

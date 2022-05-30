@@ -12,11 +12,6 @@ export const DefaultButton = styled(Button)`
     justify-content: space-evenly;
     text-transform: capitalize;
     transition: .5s;
-
-    :focus {
-        background-color: ${theme.primary.main};
-        color: ${theme.neutral.main};
-    }
 `;
 
 export const PrimaryButton = styled(DefaultButton)`
