@@ -1,6 +1,6 @@
 import { Button } from 'antd';
 import styled from 'styled-components';
-import { theme } from '../theme';
+import { theme } from '../../theme';
 
 export const DefaultButton = styled(Button)`
     box-sizing: border-box;
