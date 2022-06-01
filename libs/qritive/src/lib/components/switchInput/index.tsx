@@ -1,4 +1,3 @@
-import React from 'react';
 import { Switch } from 'antd';
 import { SwitchSize } from 'antd/lib/switch';
 import { SwitchInputContainer } from './style';
